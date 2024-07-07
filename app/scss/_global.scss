@@ -1,0 +1,97 @@
+:root {
+    --font-family: 'Geologica', sans-serif;
+    --second-family: 'Roboto', sans-serif;
+    --outline: rgba(244, 245, 246, 0.3);
+    --gray---04: #f4f5f6;
+    --gray---1o: #ececec;
+    --gray---2o: #dedede;
+    --gray---3o: #b3b3b3;
+    --gray---4o: #999;
+    --gray---5o: #808080;
+    --gray---6o: #686868;
+    --gray---7o: #4d4d4d;
+    --gray---8o: #2e2e30;
+    --gray---9o: #202020;
+    --gray-10o: #000;
+    --primary-blue-04: #f1f8ff;
+    --primary-blue-1o: #d1eaff;
+    --primary-blue-2o: #b6ddff;
+    --primary-blue-3o: #7fbaee;
+    --primary-blue-4o: #55a3e9;
+    --primary-blue-5o: #2a8ce3;
+    --primary-blue-6o: #2270b6;
+    --primary-blue-7o: #195488;
+    --primary-blue-8o: #11385b;
+    --primary-blue-9o: #081c2d;
+    --primary-blue-10o: #040e17;
+    --primary-light-blue-04: #eefafe;
+    --primary-light-blue-1o: #dcf5fc;
+    --primary-light-blue-2o: #b9ebf9;
+    --primary-light-blue-3o: #97e2f7;
+    --primary-light-blue-4o: #74d8f4;
+    --primary-light-blue-5o: #51cef1;
+    --primary-light-blue-6o: #41a9c6;
+    --primary-light-blue-7o: #31839a;
+    --primary-light-blue-8o: #225e6f;
+    --primary-light-blue-9o: #123843;
+    --primary-light-blue-10o: #021318;
+    --primary-pink-04: #ffebef;
+    --primary-pink-1o: #ffd7df;
+    --primary-pink-2o: #ffafbe;
+    --primary-pink-3o: #ff889e;
+    --primary-pink-4o: #ff607d;
+    --primary-pink-5o: #ff385d;
+    --primary-pink-6o: #cf2d4b;
+    --primary-pink-7o: #9f2239;
+    --primary-pink-8o: #6f1627;
+    --primary-pink-9o: #3f0b15;
+    --primary-pink-10o: #27060c;
+    --primary-orange-04: #fff5e6;
+    --primary-orange-1o: #ffebcd;
+    --primary-orange-2o: #ffd79c;
+    --primary-orange-3o: #ffc36a;
+    --primary-orange-4o: #ffaf39;
+    --primary-orange-5o: #ff9b07;
+    --primary-orange-6o: #cc7c06;
+    --primary-orange-7o: #995d04;
+    --primary-orange-8o: #663e03;
+    --primary-orange-9o: #331f01;
+    --primary-orange-10o: #1a1001;
+}
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex; //чтоб прилепить футер к низу, надо раскоментить хедер
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: var(--font-family);
+}
+.main {
+    flex-grow: 1;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+    font-family: serif;
+    //hz nado li eto, no mne ponadobilos
+    height: 100%;
+}
+.container-max {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 130px;
+    height: 100%;
+}
+.unselectable {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently not supported by any browser */
+}
