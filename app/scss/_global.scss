@@ -73,17 +73,17 @@ body {
 .main {
     flex-grow: 1;
 }
+// .container {
+//     max-width: 1400px;
+//     margin: 0 auto;
+//     padding: 0 15px;
+//     font-family: serif;
+//     //hz nado li eto, no mne ponadobilos
+//     height: 100%;
+// }
 .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 15px;
-    font-family: serif;
-    //hz nado li eto, no mne ponadobilos
-    height: 100%;
-}
-.container-max {
     max-width: 1920px;
-    margin: 0 auto;
+    // margin: 0 auto;
     padding: 0 130px;
     height: 100%;
 }

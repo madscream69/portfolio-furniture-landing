@@ -1,0 +1,103 @@
+.main {
+    &__wrapper {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__menu {
+        min-width: 260px;
+    }
+    &__menu-link {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    &__menu-item {
+        &--active {
+            & > a {
+                color: var(--gray---9o);
+                padding-left: 50px;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 38px;
+                    height: 2px;
+                    background-color: var(--gray---9o);
+                    top: 50%;
+                    left: 0;
+                }
+            }
+        }
+    }
+    &__advantages {
+        display: flex;
+        gap: 48px;
+        margin-bottom: 72px;
+    }
+    &__advantage {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        &:last-child > p {
+            max-width: 200px;
+        }
+    }
+    &__advantage-img {
+        background: var(--primary-blue-04);
+        padding: 14px 12px;
+        border-radius: 50px;
+    }
+    &__advantage-text {
+        max-width: 264px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 145%;
+        color: var(--gray---8o);
+    }
+    &__request {
+        width: 100%;
+        height: 618px;
+        background-image: url(../images/request-bg.jpg);
+        border-radius: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    &__request-btn {
+        background-color: var(--primary-blue-5o);
+        border: 12px solid #fff;
+        border-radius: 50%;
+
+        width: 228px;
+        height: 228px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 125%;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+
+        position: absolute;
+        right: 48px;
+        top: -96px;
+    }
+}
+.main-title {
+    margin-top: -10px;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 100px;
+    text-transform: uppercase;
+    color: var(--gray-10o);
+
+    margin-bottom: 48px;
+}
