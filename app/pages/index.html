@@ -57,86 +57,212 @@
                 <div class="main__request">
                     <a href="#" class="main__request-btn"> Оставить заявку </a>
                 </div>
-            </div>
-            <div class="main__goods">
-                <h1 class="main__goods-title">Мебель для салонов красоты</h1>
-                <div class="main__goods-filter">
-                    <div class="main__goods-btns box-menu">
-                        <button class="main__goods-btn" data-filter="all">
-                            Все</button
-                        ><button class="main__goods-btn" data-filter=".admin">
-                            Стойки админимстратора</button
-                        ><button class="main__goods-btn" data-filter=".hall">
-                            Мебель для холла</button
-                        ><button
-                            class="main__goods-btn"
-                            data-filter=".pedicure"
-                        >
-                            педикюрное оборудование</button
-                        ><button class="main__goods-btn" data-filter=".mirrors">
-                            зеркала для салона</button
-                        ><button
-                            class="main__goods-btn"
-                            data-filter=".chair-haircat"
-                        >
-                            кресла парикмахерские</button
-                        ><button
-                            class="main__goods-btn"
-                            data-filter=".manicure"
-                        >
-                            Маникюрные столы</button
-                        ><button class="main__goods-btn" data-filter=".bollard">
-                            Тумбы</button
-                        ><button class="main__goods-btn" data-filter=".closet">
-                            Шкафы и храние
-                        </button>
+                <div class="main__goods">
+                    <h1 class="main__goods-title">
+                        Мебель для салонов красоты
+                    </h1>
+                    <div class="main__goods-filter">
+                        <div class="main__goods-btns" id="myBtnContainer">
+                            <button
+                                class="main__goods-btn active"
+                                onclick="filterSelection('all')"
+                                onclick="filterSelection('cars')"
+                            >
+                                Все</button
+                            ><button
+                                class="main__goods-btn"
+                                onclick="filterSelection('cars')"
+                            >
+                                Стойки админимстратора</button
+                            ><button
+                                class="main__goods-btn"
+                                onclick="filterSelection('animals')"
+                            >
+                                Мебель для холла</button
+                            ><button
+                                class="main__goods-btn"
+                                onclick="filterSelection('fruits')"
+                            >
+                                педикюрное оборудование</button
+                            ><button
+                                class="main__goods-btn"
+                                onclick="filterSelection('colors')"
+                            >
+                                зеркала для салона</button
+                            ><button
+                                class="main__goods-btn"
+                                onclick="filterSelection('cars')"
+                            >
+                                кресла парикмахерские</button
+                            ><button
+                                class="main__goods-btn"
+                                onclick="filterSelection('animals')"
+                            >
+                                Маникюрные столы</button
+                            ><button
+                                class="main__goods-btn"
+                                onclick="filterSelection('fruits')"
+                            >
+                                Тумбы</button
+                            ><button
+                                class="main__goods-btn"
+                                onclick="filterSelection('colors')"
+                            >
+                                Шкафы и храние
+                            </button>
+                        </div>
+                        <div class="main__goods-cards">
+                            <div class="main__goods-card cars colors">
+                                <img
+                                    src="/images/chair.jpg"
+                                    alt="chair"
+                                    class="main__card-img"
+                                />
+                                <a href="#" class="main__card-name">
+                                    Кресло для салона красоты
+                                </a>
+                                <span class="main__card-price-before"
+                                    >16 990 руб</span
+                                >
+                                <p class="main__card-price">11 990 руб</p>
+                                <div class="main__card-btns">
+                                    <a href="#" class="main__card-btn-order"
+                                        >Заказать</a
+                                    >
+                                    <a href="#" class="main__card-btn-more"
+                                        >Подробнее</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="main__goods-card colors fruits">
+                                <img
+                                    src="/images/chair.jpg"
+                                    alt="chair"
+                                    class="main__card-img"
+                                />
+                                <a href="#" class="main__card-name">
+                                    Кресло для салона красоты
+                                </a>
+                                <span class="main__card-price-before"
+                                    >16 990 руб</span
+                                >
+                                <p class="main__card-price">11 990 руб</p>
+                                <div class="main__card-btns">
+                                    <a href="#" class="main__card-btn-order"
+                                        >Заказать</a
+                                    >
+                                    <a href="#" class="main__card-btn-more"
+                                        >Подробнее</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="main__goods-card animals colors">
+                                <img
+                                    src="/images/chair.jpg"
+                                    alt="chair"
+                                    class="main__card-img"
+                                />
+                                <a href="#" class="main__card-name">
+                                    Кресло для салона красоты
+                                </a>
+                                <span class="main__card-price-before"
+                                    >16 990 руб</span
+                                >
+                                <p class="main__card-price">11 990 руб</p>
+                                <div class="main__card-btns">
+                                    <a href="#" class="main__card-btn-order"
+                                        >Заказать</a
+                                    >
+                                    <a href="#" class="main__card-btn-more"
+                                        >Подробнее</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="main__goods-card cars animals">
+                                <img
+                                    src="/images/chair.jpg"
+                                    alt="chair"
+                                    class="main__card-img"
+                                />
+                                <a href="#" class="main__card-name">
+                                    Кресло для салона красоты
+                                </a>
+                                <span class="main__card-price-before"
+                                    >16 990 руб</span
+                                >
+                                <p class="main__card-price">11 990 руб</p>
+                                <div class="main__card-btns">
+                                    <a href="#" class="main__card-btn-order"
+                                        >Заказать</a
+                                    >
+                                    <a href="#" class="main__card-btn-more"
+                                        >Подробнее</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="main__goods-card colors animals">
+                                <img
+                                    src="/images/chair.jpg"
+                                    alt="chair"
+                                    class="main__card-img"
+                                />
+                                <a href="#" class="main__card-name">
+                                    Кресло для салона красоты
+                                </a>
+                                <span class="main__card-price-before"
+                                    >16 990 руб</span
+                                >
+                                <p class="main__card-price">11 990 руб</p>
+                                <div class="main__card-btns">
+                                    <a href="#" class="main__card-btn-order"
+                                        >Заказать</a
+                                    >
+                                    <a href="#" class="main__card-btn-more"
+                                        >Подробнее</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="main__goods-card fruits">
+                                <img
+                                    src="/images/chair.jpg"
+                                    alt="chair"
+                                    class="main__card-img"
+                                />
+                                <a href="#" class="main__card-name">
+                                    Кресло для салона красоты
+                                </a>
+                                <span class="main__card-price-before"
+                                    >16 990 руб</span
+                                >
+                                <p class="main__card-price">11 990 руб</p>
+                                <div class="main__card-btns">
+                                    <a href="#" class="main__card-btn-order"
+                                        >Заказать</a
+                                    >
+                                    <a href="#" class="main__card-btn-more"
+                                        >Подробнее</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <button class="main__goods-more">Показать еще</button>
                     </div>
-                    <div class="main__goods-cards box-list">
-                        <div class="main__goods-card box-item admin pedicure">
-                            <img src="" alt="chair" class="main__card-img" />
-                            <a href="#" class="main__card-name">
-                                Кресло для салона красоты
-                            </a>
-                            <p class="main__card-price">11 990 руб</p>
-                        </div>
-                        <div class="main__goods-card box-item admin mirrors">
-                            <img src="" alt="chair" class="main__card-img" />
-                            <a href="#" class="main__card-name">
-                                Кресло для салона красоты
-                            </a>
-                            <p class="main__card-price">11 990 руб</p>
-                        </div>
-                        <div
-                            class="main__goods-card box-item closet chair-haircat"
-                        >
-                            <img src="" alt="chair" class="main__card-img" />
-                            <a href="#" class="main__card-name">
-                                Кресло для салона красоты
-                            </a>
-                            <p class="main__card-price">11 990 руб</p>
-                        </div>
-                        <div class="main__goods-card box-item manicure bollard">
-                            <img src="" alt="chair" class="main__card-img" />
-                            <a href="#" class="main__card-name">
-                                Кресло для салона красоты
-                            </a>
-                            <p class="main__card-price">11 990 руб</p>
-                        </div>
-                        <div class="main__goods-card box-item closet hall">
-                            <img src="" alt="chair" class="main__card-img" />
-                            <a href="#" class="main__card-name">
-                                Кресло для салона красоты
-                            </a>
-                            <p class="main__card-price">11 990 руб</p>
-                        </div>
-                        <div class="main__goods-card box-item bollard hall">
-                            <img src="" alt="chair" class="main__card-img" />
-                            <a href="#" class="main__card-name">
-                                Кресло для салона красоты
-                            </a>
-                            <p class="main__card-price">11 990 руб</p>
-                        </div>
-                    </div>
+                </div>
+                <div class="main__send-request">
+                    <h3 class="main__send-request-title">
+                        Не нашли нужный товар?
+                    </h3>
+                    <p class="main__send-request-text">
+                        Если вы не нашли нужный вам товар, не спешите покидать
+                        нас. Возможно, он просто не опубликован на сайте.
+                        Оставьте заявку, и мы обязательно вам поможем.
+                    </p>
+                    <a
+                        href="#"
+                        class="main__request-btn main__request-btn--red"
+                    >
+                        Оставить заявку
+                    </a>
                 </div>
             </div>
         </div>

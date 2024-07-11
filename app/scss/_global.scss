@@ -58,6 +58,14 @@
     --primary-orange-9o: #331f01;
     --primary-orange-10o: #1a1001;
 }
+%title-font {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 70px;
+    color: var(--gray-10o);
+    margin-bottom: 48px;
+}
 html,
 body {
     height: 100%;
