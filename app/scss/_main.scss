@@ -238,6 +238,95 @@
         line-height: 30px;
         color: #fff;
     }
+    &__about {
+        margin-top: 120px;
+    }
+    &__about-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: var(--gray---5o);
+        margin-bottom: 12px;
+    }
+    &__about-choose {
+        background-image: url(../images/about-bg.jpg);
+        height: 906px;
+        margin-top: 48px;
+        margin-bottom: 24px;
+        border-radius: 20px;
+        position: relative;
+        &:has(.main__about-link--1:hover) {
+            background-image: url(../images/about-bg-1.jpg);
+        }
+    }
+    &__about-link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--gray-10o);
+
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        padding: 6px;
+        background: #fff;
+        position: absolute;
+        text-align: center;
+
+        transition: all 0.5s ease;
+        transition-delay: 3s;
+
+        &:hover .main__about-pop {
+            display: block;
+        }
+
+        &--1 {
+            top: 46%;
+            right: 30%;
+        }
+        &--2 {
+            bottom: 30%;
+            left: 50%;
+        }
+    }
+    &__about-pop {
+        text-align: left;
+        display: none;
+        position: absolute;
+        top: -70px;
+        left: 0;
+        background-color: #fff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        width: 104px;
+        height: 56px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            bottom: -5px;
+            left: 8px;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            transform: rotate(45deg);
+        }
+    }
+    &__about-pop-title {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--gray-10o);
+        margin-bottom: 4px;
+    }
+    &__about-pop-link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--primary-blue-5o);
+    }
 }
 .main-title {
     margin-top: -10px;
