@@ -45,3 +45,26 @@ for (var i = 0; i < btns.length; i++) {
         this.className += ' active';
     });
 }
+const popbi = document.querySelector('.main__about-pop');
+
+function togglePop() {
+    document.querySelectorAll('.main__about-link').forEach((e) => {
+        e.addEventListener('click', () => {
+            // console.log('clicked');
+            e.querySelector('.main__about-pop').classList.toggle('show');
+        });
+    });
+}
+togglePop();
+document.addEventListener('click', (event) => {
+    document.querySelectorAll('.main__about-link').forEach((e) => {
+        if (event.target == e) {
+            e.addEventListener('click', () => {
+                // console.log('clicked');
+                e.querySelector('.main__about-pop').classList.toggle('show');
+            });
+        } else {
+            e.querySelector('.main__about-pop').classList.remove('show');
+        }
+    });
+});

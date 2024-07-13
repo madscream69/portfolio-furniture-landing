@@ -258,6 +258,39 @@
         &:has(.main__about-link--1:hover) {
             background-image: url(../images/about-bg-1.jpg);
         }
+        &:has(.main__about-link--2:hover) {
+            background-image: url(../images/about-bg-2.jpg);
+        }
+        &:has(.main__about-link--4:hover) {
+            background-image: url(../images/about-bg-4.jpg);
+        }
+        &:has(.main__about-link--5:hover) {
+            background-image: url(../images/about-bg-5.jpg);
+        }
+        &:has(.main__about-link--6:hover) {
+            background-image: url(../images/about-bg-6.jpg);
+        }
+        &:has(.main__about-link--7:hover) {
+            background-image: url(../images/about-bg-7.jpg);
+        }
+        &:has(.main__about-link--8:hover) {
+            background-image: url(../images/about-bg-8.jpg);
+        }
+        &:has(.main__about-link--9:hover) {
+            background-image: url(../images/about-bg-9.jpg);
+        }
+        &:has(.main__about-link--10:hover) {
+            background-image: url(../images/about-bg-10.jpg);
+        }
+        &:has(.main__about-link--11:hover) {
+            background-image: url(../images/about-bg-11.jpg);
+        }
+        &:has(.main__about-link--12:hover) {
+            background-image: url(../images/about-bg-12.jpg);
+        }
+        &:has(.main__about-link--13:hover) {
+            background-image: url(../images/about-bg-13.jpg);
+        }
     }
     &__about-link {
         font-weight: 400;
@@ -272,13 +305,14 @@
         background: #fff;
         position: absolute;
         text-align: center;
+        cursor: pointer;
 
         transition: all 0.5s ease;
         transition-delay: 3s;
 
-        &:hover .main__about-pop {
-            display: block;
-        }
+        // &:hover .main__about-pop {
+        //     display: block;
+        // }
 
         &--1 {
             top: 46%;
@@ -288,8 +322,50 @@
             bottom: 30%;
             left: 50%;
         }
+        &--4 {
+            top: 25%;
+            left: 37%;
+        }
+        &--5 {
+            top: 28%;
+            left: 56%;
+        }
+        &--6 {
+            top: 31%;
+            right: 19%;
+        }
+        &--7 {
+            top: 19%;
+            right: 18%;
+        }
+        &--8 {
+            top: 11%;
+            right: 17%;
+        }
+        &--9 {
+            top: 18%;
+            left: 46%;
+        }
+        &--10 {
+            top: 15%;
+            left: 32%;
+        }
+        &--11 {
+            top: 11%;
+            right: 38%;
+        }
+        &--12 {
+            top: 11%;
+            left: 49%;
+        }
+        &--13 {
+            top: 9%;
+            left: 37%;
+        }
     }
     &__about-pop {
+        z-index: 10;
+
         text-align: left;
         display: none;
         position: absolute;
@@ -326,6 +402,31 @@
         font-size: 14px;
         line-height: 18px;
         color: var(--primary-blue-5o);
+    }
+    &__rating {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    &__rate {
+        padding: 24px 28px;
+        background: var(--gray---04);
+        border-radius: 20px;
+        flex-basis: 32.1%;
+    }
+    &__rate-title {
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 60px;
+        text-transform: uppercase;
+        color: var(--gray---8o);
+    }
+    &__rate-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: var(--gray---6o);
     }
 }
 .main-title {
