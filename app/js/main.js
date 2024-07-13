@@ -68,3 +68,10 @@ document.addEventListener('click', (event) => {
         }
     });
 });
+
+const swiper = new Swiper('.swiper', {
+    // loop: true,
+    mousewheel: true,
+    spaceBetween: 24,
+    slidesPerView: 'auto',
+});
