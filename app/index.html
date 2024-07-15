@@ -51,21 +51,21 @@
             <nav class="main__menu">
                 <ul class="main__menu-list">
                     <li class="main__menu-item main__menu-item--active">
-                        <a href="#" class="main__menu-link">Главная</a>
+                        <a href="#main" class="main__menu-link">Главная</a>
                     </li>
                     <li class="main__menu-item">
-                        <a href="#" class="main__menu-link">Продукция</a>
+                        <a href="#goods" class="main__menu-link">Продукция</a>
                     </li>
                     <li class="main__menu-item">
-                        <a href="#" class="main__menu-link">О нас</a>
+                        <a href="#about" class="main__menu-link">О нас</a>
                     </li>
                     <li class="main__menu-item">
-                        <a href="#" class="main__menu-link">Контакты</a>
+                        <a href="#contacts" class="main__menu-link">Контакты</a>
                     </li>
                 </ul>
             </nav>
-            <div class="main__content">
-                <!-- <h1 class="main-title">
+            <div class="main__content" id="main">
+                <h1 class="main-title">
                     производим и продаем мебель для салонов красоты
                 </h1>
                 <div class="main__advantages">
@@ -103,7 +103,7 @@
                 <div class="main__request">
                     <a href="#" class="main__request-btn"> Оставить заявку </a>
                 </div>
-                <div class="main__goods">
+                <div class="main__goods" id="goods">
                     <h1 class="main__goods-title">
                         Мебель для салонов красоты
                     </h1>
@@ -311,7 +311,7 @@
                     </a>
                 </div>
 
-                <div class="main__about">
+                <div class="main__about" id="about">
                     <h1 class="main__goods-title">О фабрике</h1>
                     <p class="main__about-text">
                         Мебель-50 (mebel-50.ru) – это официальный розничный
@@ -690,8 +690,8 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
-                <div class="main__contacts">
+                </div>
+                <div class="main__contacts" id="contacts">
                     <h1 class="main__goods-title">Контакты</h1>
                     <div class="main__contacts-wrapper">
                         <div class="main__contacts-information">
@@ -805,7 +805,37 @@
                             </form>
                         </div>
                     </div>
-                    <div class="main__contacts-map"></div>
+                    <div class="main__contacts-map">
+                        <div style="position: relative; overflow: hidden">
+                            <a
+                                href="https://yandex.ru/maps/org/mebelnaya_fabrika/229325602374/?utm_medium=mapframe&utm_source=maps"
+                                style="
+                                    color: #eee;
+                                    font-size: 12px;
+                                    position: absolute;
+                                    top: 0px;
+                                "
+                                >Мебельная фабрика</a
+                            ><a
+                                href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/category/furniture_factory/184106634/?utm_medium=mapframe&utm_source=maps"
+                                style="
+                                    color: #eee;
+                                    font-size: 12px;
+                                    position: absolute;
+                                    top: 14px;
+                                "
+                                >Мебельная фабрика в Москве и Московской
+                                области</a
+                            ><iframe
+                                src="https://yandex.ru/map-widget/v1/?ll=37.085931%2C56.157201&mode=poi&poi%5Bpoint%5D=37.084766%2C56.155929&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D229325602374&z=16.74"
+                                width="1380"
+                                height="530"
+                                frameborder="1"
+                                allowfullscreen="true"
+                                style="position: relative; border: none"
+                            ></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
