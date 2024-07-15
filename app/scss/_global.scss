@@ -9,7 +9,6 @@
 html,
 body {
     height: 100%;
-    overflow-x: hidden;
 }
 
 body {
@@ -17,6 +16,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: var(--font-family);
+
+    overflow-x: hidden;
 }
 .main {
     flex-grow: 1;
