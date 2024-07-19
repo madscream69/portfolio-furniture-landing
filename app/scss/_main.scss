@@ -848,3 +848,124 @@ body.jw-modal-open {
     /* body overflow is hidden to hide main scrollbar when modal window is open */
     overflow: hidden;
 }
+
+@media (max-width: 992px) {
+    .main__menu {
+        display: none;
+    }
+    .main__content {
+        width: 100%;
+    }
+    .main-title {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 40px;
+        text-transform: uppercase;
+        color: var(--gray-10o);
+        margin-bottom: 24px;
+    }
+    .main__advantages {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+    .main__advantage {
+        gap: 12px;
+    }
+    .main__advantage-text,
+    .main__advantage:last-child > p {
+        max-width: 100%;
+    }
+    .main__advantage-img {
+        padding: 8px 6px;
+    }
+    .main__request {
+        border-radius: 10px;
+        height: 322px;
+    }
+    .main__request-btn {
+        font-size: 16px;
+        line-height: 20px;
+        border: 8px solid #fff;
+        width: 153px;
+        height: 153px;
+        top: -80px;
+    }
+    .main__goods {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .main__goods-title {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 35px;
+        color: var(--gray-10o);
+        margin-bottom: 24px;
+    }
+    .main__goods-cards {
+        justify-content: space-between;
+    }
+    .main__goods-card {
+        flex-basis: 46.6%;
+    }
+    .main__send-request {
+        height: 300px;
+        padding: 38px;
+        background-position: bottom right, 57% bottom;
+        background-size: 145px 196px, 130px auto;
+    }
+    .main__send-request-title {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 35px;
+        color: #fff;
+    }
+    .main__send-request-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #fff;
+
+        max-width: 384px;
+    }
+    .main__request-btn--red {
+        width: 184px !important;
+        height: 184px !important;
+        top: auto;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 23px;
+        right: 103px;
+    }
+    .main__about {
+        margin-top: 60px;
+    }
+    .main__about-choose {
+        margin-top: 24px;
+        height: 476px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .main__rating {
+        gap: 3%;
+        justify-content: space-between;
+    }
+    .main__rate {
+        padding: 16px;
+        flex-basis: 31%;
+    }
+    .main__rate-title {
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 35px;
+        margin-bottom: 12px;
+    }
+    .main__rate-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .main__rooms {
+        margin-top: 60px;
+    }
+}

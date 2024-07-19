@@ -166,3 +166,9 @@ document
         event.preventDefault();
         openModal('modal-1');
     });
+
+if (window.innerWidth === 992) {
+    document.querySelectorAll('.main__advantage-img').forEach((elem) => {
+        elem.src = '../images/src/icons/tick-small.svg';
+    });
+}
