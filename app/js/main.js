@@ -1,3 +1,7 @@
+SmoothScroll({
+    stepSize: 120,
+    animationTime: 800, // [ms]
+});
 let navbar = document.querySelector('.main__menu-list').classList;
 let active_class = 'fixed-nav';
 
@@ -39,6 +43,26 @@ window.addEventListener('scroll', (e) => {
         }
     });
 });
+
+document
+    .querySelector('.main__menu')
+    .addEventListener('click', function (event) {
+        if (event.target.classList.contains('main__menu-link')) {
+            event.preventDefault();
+
+            var id = event.target.getAttribute('href');
+            var targetElement = document.querySelector(id);
+
+            if (targetElement) {
+                var top = targetElement.offsetTop;
+
+                window.scrollTo({
+                    top: top,
+                    behavior: 'smooth',
+                });
+            }
+        }
+    });
 filterSelection('all');
 function filterSelection(c) {
     var x, i;
@@ -116,3 +140,29 @@ const swiper = new Swiper('.swiper', {
     spaceBetween: 24,
     slidesPerView: 'auto',
 });
+// open modal by id
+function openModal(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.classList.add('jw-modal-open');
+}
+
+// close currently open modal
+function closeModal() {
+    document.querySelector('.jw-modal.open').classList.remove('open');
+    document.body.classList.remove('jw-modal-open');
+}
+
+window.addEventListener('load', function () {
+    // close modals on background click
+    document.addEventListener('click', (event) => {
+        if (event.target.classList.contains('jw-modal')) {
+            closeModal();
+        }
+    });
+});
+document
+    .querySelector('.main__request-btn.main__request-btn--red')
+    .addEventListener('click', (event) => {
+        event.preventDefault();
+        openModal('modal-1');
+    });

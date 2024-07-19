@@ -35,6 +35,8 @@ body {
     // margin: 0 auto;
     padding: 0 130px;
     height: 100%;
+
+    perspective: 800px;
 }
 .unselectable {
     -webkit-touch-callout: none; /* iOS Safari */

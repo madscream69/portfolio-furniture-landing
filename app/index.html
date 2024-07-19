@@ -46,6 +46,54 @@
 </html>
 
 <main class="main">
+    <div id="modal-1" class="jw-modal">
+        <div class="jw-modal-body">
+            <div class="modal-info">
+                <h3 class="modal-title">Не нашли нужный товар?</h3>
+                <p class="modal-text">
+                    Если вы не нашли нужный вам товар, не спешите покидать нас.
+                    Возможно, он просто не опубликован на сайте. Оставьте
+                    заявку, и мы обязательно вам поможем.
+                </p>
+            </div>
+
+            <form class="modal-form">
+                <input class="main__form-input" type="text" placeholder="Имя" />
+                <input
+                    class="main__form-input"
+                    type="text"
+                    placeholder="Телефон"
+                />
+                <div class="modal__form-files">
+                    <input type="file" class="main__form-file" />
+                    <div class="main__file-textbox">
+                        <p class="modal__file-title">
+                            Нажмите на кнопку или перетащите файлы <br />
+                            в эту область
+                        </p>
+                        <p class="modal__file-text">
+                            До 10 файлов в формате PNG, JPEG, PDF
+                        </p>
+                    </div>
+                </div>
+
+                <label class="modal__form-label">
+                    <input type="checkbox" class="main__form-check" />
+                    <span>
+                        Даю согласие на
+                        <a href="#"> обработку моих персональных данных</a>
+                    </span>
+                </label>
+                <button
+                    onclick="closeModal()"
+                    type="submit"
+                    class="modal__form-btn"
+                >
+                    Отправить
+                </button>
+            </form>
+        </div>
+    </div>
     <div class="container">
         <div class="main__wrapper">
             <nav class="main__menu">
@@ -850,6 +898,7 @@
         </div>
         
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha512-HaoDYc3PGduguBWOSToNc0AWGHBi2Y432Ssp3wNIdlOzrunCtB2qq6FrhtPbo+PlbvRbyi86dr5VQx61eg/daQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
