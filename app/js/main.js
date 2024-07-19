@@ -167,8 +167,10 @@ document
         openModal('modal-1');
     });
 
-if (window.innerWidth === 992) {
+if (window.innerWidth <= 992) {
     document.querySelectorAll('.main__advantage-img').forEach((elem) => {
         elem.src = '../images/src/icons/tick-small.svg';
     });
+    document.querySelector('.main__contacts-map').innerHTML =
+        '<div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/mebelnaya_fabrika/229325602374/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Мебельная фабрика</a><a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/category/furniture_factory/184106634/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Мебельная фабрика в Москве и Московской области</a><iframe src="https://yandex.ru/map-widget/v1/?azimuth=0.0020453077171808547&ll=37.085203%2C56.155899&mode=poi&poi%5Bpoint%5D=37.084766%2C56.155929&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D229325602374&z=18.67" width="724" height="280" frameborder="1" allowfullscreen="true" style="position:relative; border: none;"></iframe></div>';
 }
