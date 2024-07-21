@@ -148,18 +148,35 @@ function openModal(id) {
 
 // close currently open modal
 function closeModal() {
-    document.querySelector('.jw-modal.open').classList.remove('open');
+    if (document.querySelector('.jw-modal.open')) {
+        document.querySelector('.jw-modal.open').classList.remove('open');
+    }
+    if (document.querySelector('.partner-pop.open')) {
+        document.querySelector('.partner-pop.open').classList.remove('open');
+    }
+    if (document.querySelector('.callback-pop.open')) {
+        document.querySelector('.callback-pop.open').classList.remove('open');
+    }
+    if (document.querySelector('.request-pop.open')) {
+        document.querySelector('.request-pop.open').classList.remove('open');
+    }
     document.body.classList.remove('jw-modal-open');
 }
 
 window.addEventListener('load', function () {
     // close modals on background click
     document.addEventListener('click', (event) => {
-        if (event.target.classList.contains('jw-modal')) {
+        if (
+            event.target.classList.contains('jw-modal') ||
+            event.target.classList.contains('partner-pop') ||
+            event.target.classList.contains('callback-pop') ||
+            event.target.classList.contains('request-pop')
+        ) {
             closeModal();
         }
     });
 });
+
 document
     .querySelector('.main__request-btn.main__request-btn--red')
     .addEventListener('click', (event) => {
@@ -167,6 +184,26 @@ document
         openModal('modal-1');
     });
 
+document
+    .querySelector('.header__partner')
+    .addEventListener('click', (event) => {
+        event.preventDefault();
+        openModal('partner');
+    });
+document.querySelector('.header__phone').addEventListener('click', (event) => {
+    event.preventDefault();
+    openModal('callback');
+});
+document.querySelector('#call').addEventListener('click', (event) => {
+    event.preventDefault();
+    openModal('callback');
+});
+document
+    .querySelector('.main__request-btn')
+    .addEventListener('click', (event) => {
+        event.preventDefault();
+        openModal('request');
+    });
 if (window.innerWidth <= 992) {
     document.querySelectorAll('.main__advantage-img').forEach((elem) => {
         elem.src = '../images/src/icons/tick-small.svg';

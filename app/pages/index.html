@@ -1,4 +1,136 @@
 <!--=include header.html -->
+<div id="partner" class="partner-pop">
+    <div class="partner-pop-body">
+        <div class="partner-pop__wrapper">
+            <div class="partner-pop__top">
+                <h6 class="partner-pop__title">Станьте партнером фабрики</h6>
+                <button class="partner-pop__btn" onclick="closeModal()">
+                    <span></span>
+                </button>
+            </div>
+            <p class="partner-pop__text">
+                Небольшое описание, на одну, две или три строчки. Небольшое
+                описание, на одну, две или три строчки.
+            </p>
+            <from class="partner-pop__form">
+                <input class="main__form-input" type="text" placeholder="Имя" />
+                <input
+                    class="main__form-input"
+                    type="email"
+                    placeholder="Email"
+                />
+                <input
+                    class="main__form-input"
+                    type="text"
+                    placeholder="Телефон"
+                />
+                <input
+                    class="main__form-input"
+                    type="text"
+                    placeholder="Город"
+                />
+                <textarea
+                    class="main__form-txtarea"
+                    placeholder="Расскажите немного о своей деятельности"
+                ></textarea>
+                <label class="main__form-label">
+                    <input type="checkbox" class="main__form-check" />
+                    <span>
+                        Даю согласие на
+                        <a href="#"> обработку моих персональных данных</a>
+                    </span>
+                </label>
+                <button type="submit" class="main__form-btn">Отправить</button>
+            </from>
+        </div>
+    </div>
+</div>
+
+<div id="callback" class="callback-pop">
+    <div class="callback-pop-body">
+        <div class="callback-pop__wrapper">
+            <div class="partner-pop__top">
+                <h6 class="partner-pop__title">Заказать звонок</h6>
+                <button class="partner-pop__btn" onclick="closeModal()">
+                    <span></span>
+                </button>
+            </div>
+            <p class="partner-pop__text">
+                Небольшое описание, на одну, две или три строчки. Небольшое
+                описание, на одну, две или три строчки.
+            </p>
+            <from class="partner-pop__form">
+                <input class="main__form-input" type="text" placeholder="Имя" />
+
+                <input
+                    class="main__form-input"
+                    type="text"
+                    placeholder="Телефон"
+                />
+                <label class="main__form-label">
+                    <input type="checkbox" class="main__form-check" />
+                    <span>
+                        Даю согласие на
+                        <a href="#"> обработку моих персональных данных</a>
+                    </span>
+                </label>
+                <button type="submit" class="main__form-btn">
+                    Перезвонить мне
+                </button>
+            </from>
+        </div>
+    </div>
+</div>
+
+<div id="request" class="request-pop">
+    <div class="request-pop-body">
+        <div class="request-pop__wrapper">
+            <div class="partner-pop__top">
+                <h6 class="partner-pop__title">Заказать звонок</h6>
+                <button class="partner-pop__btn" onclick="closeModal()">
+                    <span></span>
+                </button>
+            </div>
+            <p class="partner-pop__text">
+                Небольшое описание, на одну, две или три строчки. Небольшое
+                описание, на одну, две или три строчки.
+            </p>
+            <from class="partner-pop__form">
+                <input class="main__form-input" type="text" placeholder="Имя" />
+
+                <input
+                    class="main__form-input"
+                    type="text"
+                    placeholder="Телефон"
+                />
+                <div class="main__form-files">
+                    <input type="file" class="main__form-file" />
+                    <div class="main__file-textbox">
+                        <p class="main__file-title">
+                            Нажмите на кнопку или перетащите файлы <br />
+                            в эту область
+                        </p>
+                        <p class="main__file-text">
+                            До 10 файлов в формате PNG, JPEG, PDF
+                        </p>
+                    </div>
+                </div>
+                <label class="main__form-label">
+                    <input type="checkbox" class="main__form-check" />
+                    <span>
+                        Даю согласие на
+                        <a href="#"> обработку моих персональных данных</a>
+                    </span>
+                </label>
+
+                <button type="submit" class="main__form-btn">
+                    Перезвонить мне
+                </button>
+            </from>
+        </div>
+    </div>
+</div>
+
 <main class="main">
     <div id="modal-1" class="jw-modal">
         <div class="jw-modal-body">
@@ -105,6 +237,7 @@
                 <div class="main__request">
                     <a href="#" class="main__request-btn"> Оставить заявку </a>
                 </div>
+                <a href="#" class="main__request-btn-mobile">Оставить заявку</a>
                 <div class="main__goods" id="goods">
                     <h1 class="main__goods-title">
                         Мебель для салонов красоты

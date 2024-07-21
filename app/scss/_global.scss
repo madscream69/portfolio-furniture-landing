@@ -46,3 +46,8 @@ body {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently not supported by any browser */
 }
+@media (max-width: 360px) {
+    .container {
+        padding: 0 24px;
+    }
+}

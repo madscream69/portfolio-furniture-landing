@@ -19,4 +19,23 @@
     .footer {
         margin-top: 60px;
     }
+
+    .footer {
+        margin-top: 60px;
+        padding-bottom: 75px;
+        min-height: 195px;
+    }
+}
+@media (max-width: 992px) {
+    .footer {
+        padding-top: 24px;
+    }
+    .footer__wrapper {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer__text {
+        text-align: center;
+    }
 }
