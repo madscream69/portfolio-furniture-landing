@@ -253,7 +253,7 @@ if (window.innerWidth <= 360) {
 
 let thumbnails = document.querySelectorAll('.thumbnail');
 let mainImage = document.getElementById('main-image');
-thumbnails[0].style.border = '1px solid red';
+thumbnails[0].style.border = '1px solid var(--primary-blue-5o)';
 thumbnails.forEach((img) => img.addEventListener('click', imgClick));
 
 function imgClick(e) {
@@ -261,5 +261,5 @@ function imgClick(e) {
     mainImage.src = e.target.src;
     mainImage.classList.add('fade-in');
     setTimeout(() => mainImage.classList.remove('fade-in'), 500);
-    e.target.style.border = '1px solid red';
+    e.target.style.border = '1px solid var(--primary-blue-5o)';
 }
