@@ -2,13 +2,13 @@ SmoothScroll({
     stepSize: 120,
     animationTime: 800, // [ms]
 });
-let navbar = document.querySelector('.main__menu-list').classList;
-let active_class = 'fixed-nav';
 
 /**
  * Слушаем событие прокрутки
  */
 window.addEventListener('scroll', (e) => {
+    let navbar = document.querySelector('.main__menu-list').classList;
+    let active_class = 'fixed-nav';
     if (pageYOffset > 250) navbar.add(active_class);
     else navbar.remove(active_class);
     var sections = [
@@ -43,26 +43,28 @@ window.addEventListener('scroll', (e) => {
         }
     });
 });
+if (document.querySelector('.main__menu')) {
+    document
+        .querySelector('.main__menu')
+        .addEventListener('click', function (event) {
+            if (event.target.classList.contains('main__menu-link')) {
+                event.preventDefault();
 
-document
-    .querySelector('.main__menu')
-    .addEventListener('click', function (event) {
-        if (event.target.classList.contains('main__menu-link')) {
-            event.preventDefault();
+                var id = event.target.getAttribute('href');
+                var targetElement = document.querySelector(id);
 
-            var id = event.target.getAttribute('href');
-            var targetElement = document.querySelector(id);
+                if (targetElement) {
+                    var top = targetElement.offsetTop;
 
-            if (targetElement) {
-                var top = targetElement.offsetTop;
-
-                window.scrollTo({
-                    top: top,
-                    behavior: 'smooth',
-                });
+                    window.scrollTo({
+                        top: top,
+                        behavior: 'smooth',
+                    });
+                }
             }
-        }
-    });
+        });
+}
+
 filterSelection('all');
 function filterSelection(c) {
     var x, i;
@@ -101,15 +103,18 @@ function w3RemoveClass(element, name) {
 }
 
 // Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById('myBtnContainer');
-var btns = btnContainer.getElementsByClassName('main__goods-btn');
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener('click', function () {
-        var current = document.getElementsByClassName('active');
-        current[0].className = current[0].className.replace(' active', '');
-        this.className += ' active';
-    });
+if (document.getElementById('myBtnContainer')) {
+    var btnContainer = document.getElementById('myBtnContainer');
+    var btns = btnContainer.getElementsByClassName('main__goods-btn');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('click', function () {
+            var current = document.getElementsByClassName('active');
+            current[0].className = current[0].className.replace(' active', '');
+            this.className += ' active';
+        });
+    }
 }
+
 const popbi = document.querySelector('.main__about-pop');
 
 function togglePop() {
@@ -178,13 +183,6 @@ window.addEventListener('load', function () {
 });
 
 document
-    .querySelector('.main__request-btn.main__request-btn--red')
-    .addEventListener('click', (event) => {
-        event.preventDefault();
-        openModal('modal-1');
-    });
-
-document
     .querySelector('.header__partner')
     .addEventListener('click', (event) => {
         event.preventDefault();
@@ -198,16 +196,70 @@ document.querySelector('#call').addEventListener('click', (event) => {
     event.preventDefault();
     openModal('callback');
 });
-document
-    .querySelector('.main__request-btn')
-    .addEventListener('click', (event) => {
-        event.preventDefault();
-        openModal('request');
-    });
+if (document.querySelector('.main__request-btn-mobile')) {
+    document
+        .querySelector('.main__request-btn-mobile')
+        .addEventListener('click', (event) => {
+            event.preventDefault();
+            openModal('request');
+        });
+}
+if (document.querySelector('.main__request-btn')) {
+    document
+        .querySelector('.main__request-btn')
+        .addEventListener('click', (event) => {
+            event.preventDefault();
+            openModal('request');
+        });
+}
+
+document.querySelector('.cookie__btn').addEventListener('click', (event) => {
+    event.preventDefault();
+    document.querySelector('.cookie__wrapper').classList.add('hidden');
+});
 if (window.innerWidth <= 992) {
     document.querySelectorAll('.main__advantage-img').forEach((elem) => {
         elem.src = '../images/src/icons/tick-small.svg';
     });
     document.querySelector('.main__contacts-map').innerHTML =
         '<div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/mebelnaya_fabrika/229325602374/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Мебельная фабрика</a><a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/category/furniture_factory/184106634/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Мебельная фабрика в Москве и Московской области</a><iframe src="https://yandex.ru/map-widget/v1/?azimuth=0.0020453077171808547&ll=37.085203%2C56.155899&mode=poi&poi%5Bpoint%5D=37.084766%2C56.155929&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D229325602374&z=18.67" width="724" height="280" frameborder="1" allowfullscreen="true" style="position:relative; border: none;"></iframe></div>';
+}
+
+if (window.innerWidth <= 360) {
+    document
+        .querySelector('.main__request-btn.main__request-btn--red')
+        .addEventListener('click', (event) => {
+            event.preventDefault();
+            openModal('request');
+        });
+    const swiperMobile = new Swiper('.swiper', {
+        // loop: true,
+        mousewheel: true,
+        spaceBetween: 12,
+        slidesPerView: 'auto',
+    });
+    document.querySelector('.main__contacts-map').innerHTML =
+        '<div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/mebelnaya_fabrika/229325602374/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Мебельная фабрика</a><a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/category/furniture_factory/184106634/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Мебельная фабрика в Москве и Московской области</a><iframe src="https://yandex.ru/map-widget/v1/?ll=37.085197%2C56.157014&mode=poi&poi%5Bpoint%5D=37.084766%2C56.155929&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D229325602374&z=17.4" width="312" height="190" frameborder="1" allowfullscreen="true" style="position:relative; border: none; border-radius: 20px;"></iframe></div>';
+} else {
+    if (document.querySelector('.main__request-btn.main__request-btn--red')) {
+        document
+            .querySelector('.main__request-btn.main__request-btn--red')
+            .addEventListener('click', (event) => {
+                event.preventDefault();
+                openModal('modal-1');
+            });
+    }
+}
+
+let thumbnails = document.querySelectorAll('.thumbnail');
+let mainImage = document.getElementById('main-image');
+thumbnails[0].style.border = '1px solid red';
+thumbnails.forEach((img) => img.addEventListener('click', imgClick));
+
+function imgClick(e) {
+    thumbnails.forEach((img) => (img.style.border = 'none'));
+    mainImage.src = e.target.src;
+    mainImage.classList.add('fade-in');
+    setTimeout(() => mainImage.classList.remove('fade-in'), 500);
+    e.target.style.border = '1px solid red';
 }

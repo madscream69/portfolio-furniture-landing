@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+        <link rel="stylesheet" href="css/style.min.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>furniture</title>
+    </head>
+    <body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__wrapper-left">
+                    <img src="/images/logo.svg" alt="Logo" class="header__logo">
+                    <a href="#" class="header__partner">Cтать партнером фабрики</a>
+                </div>
+                <div class="header__wrapper-right">
+                    <div class="header__schedule">
+                        <span class="header__schedule-time">Звоните. Пн-Вс 9:00 - 21:00</span>
+                        <span class="header__schedule-number">+7 (495) 798-25-65</span>
+                    </div>
+                    <a href="#" class="header__phone">
+                        <img src="/images/src/icons/phone.svg" alt="svg" class="header__phone-img">
+                    </a>
+                    <a href="#" class="header__whatsapp">
+                        <img src="/images/src/icons/whatsapp.svg" alt="svg" class="header__whatsapp-img">
+                        Написать в whatsapp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+        
+    
+</html>
+
+<div class="cookie__wrapper">
+    <div class="container">
+        <div id="cookie_note" class="cookie">
+            <p class="cookie__text">
+                Мы используем cookie-файлы для улучшения предоставляемых услуг.
+                Продолжая навигацию по сайту, вы соглашаетесь с правилами
+                использования cookie-файлов.
+            </p>
+            <button class="cookie__btn">Принять и продолжить</button>
+        </div>
+    </div>
+</div>
+<div id="partner" class="partner-pop">
+    <div class="partner-pop-body">
+        <div class="partner-pop__wrapper">
+            <div class="partner-pop__top">
+                <h6 class="partner-pop__title">Станьте партнером фабрики</h6>
+                <button class="partner-pop__btn" onclick="closeModal()">
+                    <span></span>
+                </button>
+            </div>
+            <p class="partner-pop__text">
+                Небольшое описание, на одну, две или три строчки. Небольшое
+                описание, на одну, две или три строчки.
+            </p>
+            <from class="partner-pop__form">
+                <input class="main__form-input" type="text" placeholder="Имя" />
+                <input
+                    class="main__form-input"
+                    type="email"
+                    placeholder="Email"
+                />
+                <input
+                    class="main__form-input"
+                    type="text"
+                    placeholder="Телефон"
+                />
+                <input
+                    class="main__form-input"
+                    type="text"
+                    placeholder="Город"
+                />
+                <textarea
+                    class="main__form-txtarea"
+                    placeholder="Расскажите немного о своей деятельности"
+                ></textarea>
+                <label class="main__form-label">
+                    <input type="checkbox" class="main__form-check" />
+                    <span>
+                        Даю согласие на
+                        <a href="#"> обработку моих персональных данных</a>
+                    </span>
+                </label>
+                <button type="submit" class="main__form-btn">Отправить</button>
+            </from>
+        </div>
+    </div>
+</div>
+
+<div id="callback" class="callback-pop">
+    <div class="callback-pop-body">
+        <div class="callback-pop__wrapper">
+            <div class="partner-pop__top">
+                <h6 class="partner-pop__title">Заказать звонок</h6>
+                <button class="partner-pop__btn" onclick="closeModal()">
+                    <span></span>
+                </button>
+            </div>
+            <p class="partner-pop__text">
+                Небольшое описание, на одну, две или три строчки. Небольшое
+                описание, на одну, две или три строчки.
+            </p>
+            <from class="partner-pop__form">
+                <input class="main__form-input" type="text" placeholder="Имя" />
+
+                <input
+                    class="main__form-input"
+                    type="text"
+                    placeholder="Телефон"
+                />
+                <label class="main__form-label">
+                    <input type="checkbox" class="main__form-check" />
+                    <span>
+                        Даю согласие на
+                        <a href="#"> обработку моих персональных данных</a>
+                    </span>
+                </label>
+                <button type="submit" class="main__form-btn">
+                    Перезвонить мне
+                </button>
+            </from>
+        </div>
+    </div>
+</div>
+
+<div id="request" class="request-pop">
+    <div class="request-pop-body">
+        <div class="request-pop__wrapper">
+            <div class="partner-pop__top">
+                <h6 class="partner-pop__title">Оставить заявку</h6>
+                <button class="partner-pop__btn" onclick="closeModal()">
+                    <span></span>
+                </button>
+            </div>
+            <p class="partner-pop__text">
+                Небольшое описание, на одну, две или три строчки. Небольшое
+                описание, на одну, две или три строчки.
+            </p>
+            <from class="partner-pop__form">
+                <input class="main__form-input" type="text" placeholder="Имя" />
+
+                <input
+                    class="main__form-input"
+                    type="text"
+                    placeholder="Телефон"
+                />
+                <div class="main__form-files">
+                    <input type="file" class="main__form-file" />
+                    <div class="main__file-textbox">
+                        <p class="main__file-title">
+                            Нажмите на кнопку или перетащите файлы <br />
+                            в эту область
+                        </p>
+                        <p class="main__file-text">
+                            До 10 файлов в формате PNG, JPEG, PDF
+                        </p>
+                    </div>
+                </div>
+                <label class="main__form-label">
+                    <input type="checkbox" class="main__form-check" />
+                    <span>
+                        Даю согласие на
+                        <a href="#"> обработку моих персональных данных</a>
+                    </span>
+                </label>
+
+                <button type="submit" class="main__form-btn">отправить</button>
+            </from>
+        </div>
+    </div>
+</div>
+<main class="product-main">
+    <div class="container">
+        <div class="product-main__wrapper">
+            <a href="index.html" class="back-btn">Вернуться обратно</a>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__text">Главная</a>
+                </li>
+                <li class="breadcrumbs__item breadcrumbs__item--active">
+                    <a href="#" class="breadcrumbs__text"
+                        >Кресло для салона красоты</a
+                    >
+                </li>
+            </ul>
+            <div class="product-main__content">
+                <div class="product-main__info">
+                    <div class="product-main__info-box">
+                        <div class="product-main__gallery">
+                            <div id="image-gallery">
+                                <!--  style='background-image: url(https://www.cleo.com/sites/default/files/api-integration.png);'  -->
+                                <img
+                                    src="https://i.postimg.cc/ 1RWVB11x/pexels-photo-941693.jpg"
+                                    alt=""
+                                    id="main-image"
+                                />
+                                <div id="thumbnail-container">
+                                    <img
+                                        class="thumbnail"
+                                        src="https://i.postimg.cc/ 1RWVB11x/pexels-photo-941693.jpg"
+                                        alt="image1"
+                                    />
+                                    <img
+                                        class="thumbnail"
+                                        src="https://i.postimg.cc/ BQCRL38F/pexels-photo-761963.jpg"
+                                        alt="image1"
+                                    />
+
+                                    <img
+                                        class="thumbnail"
+                                        src="https://i.postimg.cc/ CMfHRKFP/woman-2003647-960-720.jpg"
+                                        alt="image2"
+                                    />
+                                    <img
+                                        class="thumbnail"
+                                        src="https://i.postimg.cc/T1rDCpVT/beautiful-1274056-960-720.jpg"
+                                        alt="image3"
+                                    />
+                                    <img
+                                        class="thumbnail"
+                                        src="https://i.postimg.cc/ SNf99YQr/woman-1807533-960-720.jpg"
+                                        alt="image4"
+                                    />
+                                    <img
+                                        class="thumbnail"
+                                        src="https://i.postimg.cc/ 2SHBcpZL/pexels-photo-4664520.jpg"
+                                        alt="image5"
+                                    />
+                                    <img
+                                        class="thumbnail"
+                                        src="https://i.postimg.cc/T1rDCpVT/beautiful-1274056-960-720.jpg"
+                                        alt="image3"
+                                    />
+                                    <img
+                                        class="thumbnail"
+                                        src="https://i.postimg.cc/ SNf99YQr/woman-1807533-960-720.jpg"
+                                        alt="image4"
+                                    />
+                                    <img
+                                        class="thumbnail"
+                                        src="https://i.postimg.cc/ 2SHBcpZL/pexels-photo-4664520.jpg"
+                                        alt="image5"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-main__description"></div>
+                    <div class="product-main__specs"></div>
+                </div>
+                <div class="product-main__recall"></div>
+            </div>
+        </div>
+    </div>
+</main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <p class="footer__text">&copy; ООО «Драуг», 2024. Все права защищены</p>
+                <p class="footer__text">Политика конфиденциальности</p>
+            </div>
+        </div>
+        
+    </footer>
+    <div class="menu">
+        <div class="container">
+            <div class="menu__wrapper">
+                <div class="menu__item">
+                    
+                    <a href="#" class="menu__text">
+                        <img
+                        src="images/src/icons/whatsapp.svg"
+                        alt="whatsapp"
+                        class="menu__img"
+                    />
+                        Написать в WhatsApp</a>
+                </div>
+                <div class="menu__item">
+                    
+                    <a href="#" class="menu__text">
+                        <img
+                        src="images/src/icons/phone.svg"
+                        alt="whatsapp"
+                        class="menu__img"
+                    />
+                        Позвонить</a>
+                </div>
+                <div class="menu__item">
+                    
+                    <a href="#" class="menu__text" id="call">
+                        <img
+                        src="images/src/icons/contact.svg"
+                        alt="whatsapp"
+                        class="menu__img"
+                    />
+                        Заказать звонок</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha512-HaoDYc3PGduguBWOSToNc0AWGHBi2Y432Ssp3wNIdlOzrunCtB2qq6FrhtPbo+PlbvRbyi86dr5VQx61eg/daQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
