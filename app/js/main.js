@@ -6,43 +6,46 @@ SmoothScroll({
 /**
  * Слушаем событие прокрутки
  */
-window.addEventListener('scroll', (e) => {
-    let navbar = document.querySelector('.main__menu-list').classList;
-    let active_class = 'fixed-nav';
-    if (pageYOffset > 250) navbar.add(active_class);
-    else navbar.remove(active_class);
-    var sections = [
-        document.getElementById('main'),
-        document.getElementById('goods'),
-        document.getElementById('about'),
-        document.getElementById('contacts'),
-    ];
-    var scroll = window.scrollY;
+if (document.querySelector('.main__menu-list')) {
+    window.addEventListener('scroll', (e) => {
+        let navbar = document.querySelector('.main__menu-list').classList;
+        let active_class = 'fixed-nav';
+        if (pageYOffset > 250) navbar.add(active_class);
+        else navbar.remove(active_class);
+        var sections = [
+            document.getElementById('main'),
+            document.getElementById('goods'),
+            document.getElementById('about'),
+            document.getElementById('contacts'),
+        ];
+        var scroll = window.scrollY;
 
-    sections.forEach(function (section) {
-        var top = section.offsetTop - 120;
-        var bottom = top + section.offsetHeight + 1200;
-        var id = section.getAttribute('id');
+        sections.forEach(function (section) {
+            var top = section.offsetTop - 120;
+            var bottom = top + section.offsetHeight + 1200;
+            var id = section.getAttribute('id');
 
-        if (scroll > top && scroll < bottom) {
-            var activeLinks = document.querySelectorAll(
-                '.main__menu-item--active'
-            );
-            activeLinks.forEach(function (link) {
-                link.classList.remove('main__menu-item--active');
-            });
+            if (scroll > top && scroll < bottom) {
+                var activeLinks = document.querySelectorAll(
+                    '.main__menu-item--active'
+                );
+                activeLinks.forEach(function (link) {
+                    link.classList.remove('main__menu-item--active');
+                });
 
-            var targetLink = document.querySelector(
-                '.main__menu-link[href="#' + id + '"]'
-            );
-            if (targetLink) {
-                targetLink
-                    .closest('.main__menu-item')
-                    .classList.add('main__menu-item--active');
+                var targetLink = document.querySelector(
+                    '.main__menu-link[href="#' + id + '"]'
+                );
+                if (targetLink) {
+                    targetLink
+                        .closest('.main__menu-item')
+                        .classList.add('main__menu-item--active');
+                }
             }
-        }
+        });
     });
-});
+}
+
 if (document.querySelector('.main__menu')) {
     document
         .querySelector('.main__menu')
@@ -145,6 +148,22 @@ const swiper = new Swiper('.swiper', {
     spaceBetween: 24,
     slidesPerView: 'auto',
 });
+
+if (document.querySelector('.similar-swiper')) {
+    const similar_swiper = new Swiper('.similar-swiper', {
+        mousewheel: true,
+        spaceBetween: 20,
+        slidesPerView: 'auto',
+    });
+}
+
+if (document.querySelector('.swiper-thumbnail')) {
+    const similar_swiper = new Swiper('.swiper-thumbnail', {
+        mousewheel: true,
+        spaceBetween: 8,
+        slidesPerView: 'auto',
+    });
+}
 // open modal by id
 function openModal(id) {
     document.getElementById(id).classList.add('open');
@@ -217,7 +236,7 @@ document.querySelector('.cookie__btn').addEventListener('click', (event) => {
     event.preventDefault();
     document.querySelector('.cookie__wrapper').classList.add('hidden');
 });
-if (window.innerWidth <= 992) {
+if (window.innerWidth <= 992 && document.querySelector('.main__contacts-map')) {
     document.querySelectorAll('.main__advantage-img').forEach((elem) => {
         elem.src = '../images/src/icons/tick-small.svg';
     });

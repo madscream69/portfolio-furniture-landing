@@ -278,3 +278,110 @@
         gap: 20px;
     }
 }
+
+.swiper.similar-swiper {
+    position: relative;
+    width: 100%;
+}
+.swiper-slide.similar-swiper-slide {
+    width: 400px;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    // width: 100%;
+    // height: 806px;
+}
+.swiper.swiper-thumbnail {
+    position: relative;
+    width: 100%;
+}
+.swiper-slide.swiper-thumbnail-slide {
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    width: 62px;
+}
+
+@media (max-width: 992px) {
+    .breadcrumbs {
+        display: none;
+    }
+    .product-main__content,
+    .product-main__info-box {
+        flex-direction: column;
+    }
+    .product-main__info-box {
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+    #image-gallery {
+        width: 100%;
+        height: 791px;
+    }
+    .back-btn {
+        margin-top: 12px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #fff;
+        max-width: 156px;
+        padding: 8px 8px 8px 32px;
+        &::before {
+            top: 10px;
+            left: 14px;
+        }
+    }
+    .product-main__dimensions {
+        padding: 0;
+        max-width: 100%;
+    }
+    .product-main__dimensions-list {
+        margin-bottom: 24px;
+    }
+    .product-main__description-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 25px;
+        color: var(--gray---8o);
+    }
+    .product-main__description {
+        margin-bottom: 24px;
+    }
+    .product-main__specs {
+        padding: 20px;
+    }
+    .product-main__specs-title {
+        margin-bottom: 24px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 25px;
+        color: var(--gray---8o);
+    }
+    .product-main__recall {
+        display: none;
+    }
+    .product-main__similar {
+        margin-top: 60px;
+    }
+    .product-main__similar-title {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 35px;
+        color: var(--gray-10o);
+        margin-bottom: 24px;
+    }
+    .product-main__similar-slider {
+        height: 661px;
+        position: relative;
+    }
+    .swiper.similar-swiper {
+        position: absolute;
+        width: 845px;
+    }
+    .swiper-slide.similar-swiper-slide {
+        width: 352px;
+    }
+    .main__card-btns {
+        flex-direction: column;
+    }
+}
