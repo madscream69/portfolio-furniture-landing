@@ -385,3 +385,33 @@
         flex-direction: column;
     }
 }
+@media (max-width: 360px) {
+    #image-gallery {
+        height: 341px;
+        padding: 8px;
+        border-radius: 20px;
+    }
+    .product-main__dimensions-title {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 25px;
+        color: var(--gray-10o);
+        margin-bottom: 20px;
+    }
+    .product-main__dimensions-text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--gray---5o);
+        margin-bottom: 20px;
+    }
+    .swiper-slide.similar-swiper-slide {
+        width: 312px;
+    }
+    .swiper.similar-swiper {
+        width: 330px;
+    }
+    .product-main__similar-slider {
+        height: 605px;
+    }
+}
